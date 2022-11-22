@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link href="project.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+        <script src="project.js"></script>
+        <title>Bounce King</title>
+    </head>
+
+    <body>
+        <audio id="menuAudio" src="Menu Intro.mp3" loop></audio>
+        <audio id="slideSound" src="slide.mp3"></audio>
+        <audio id="hoverSound" src="ButtonHover.mp3"></audio>
+        <audio id="clickSound" src="ButtonClick.mp3"></audio>
+
+        <div id="startMenu">
+            <h1 id="title">Bounce King</h1>
+
+            <div id="start">- Press to Start -</div>
+
+            <div id="menu" class="select">
+                <input type="button" id="gameStart" class="button" value="Play!"><br/>
+                <input type="button" id="gameOption" class="button" value="Options"><br/>
+                <input type="button" id="rule" class="button" value="Rules" ><br/>
+                <input type="button" id="score" class="button" value="Score"><br/>
+            </div>
+
+            <div id="stageMenu" class="select">
+                <div class="back">Back</div>
+                <input type="button" id="firstStage" class="button" value="First Stage"><br/>
+                <input type="button" id="secondStage" class="button" value="Second Stage"><br/>
+                <input type="button" id="finalStage" class="button" value="Final Stage" ><br/>
+            </div>
+
+            <div id="optionMenu" class="select">
+                <div class="back">Back</div>
+                <div id="options">
+                    <p id="op1">Music sound<input type="button" id="music_button" class="button" value="on"></p><br/><br/>
+
+                    <p id="op2">Effect sound<input type="button" id="effect_button" class="button" value="on"></p><br/><br/>
+
+                    <p id="op3">Ball speed
+                        <img id="ball_sImg" src="normal.png" width="31" height="26">
+                        <input type="button" id="ball_s" class="button"value="normal">
+                    </p><br/><br/>
+
+                    <p id="op4">Block style
+                        <input type="button" id="block_s1" class="button">
+                        <input type="button" id="block_s2" class="button">
+                        <input type="button" id="block_s3" class="button">
+                    </p>
+                </div>
+            </div>
+
+            <div id="ruleMenu" class="select">
+                <div class="back">Back</div>
+                <br/><br/>
+                <div id="rule_textBox">
+                    <p id="rule_text"> <!--게임 규칙-->
+                        주인공은 공처럼 튕기며 벽돌을 깨고 왕관이 있는 정상으로 향한다. <br/>
+                        벽돌 깨기 게임과 다른 점은, 목표가 단순히 벽돌(장애물)을 깨는 것이 <br/> 
+                        아니라 벽돌을 깨고 상위 단계로 나아가야 한다는 점이다. <br/>
+                        5000점의 스코어로 게임을 시작하게 되며 벽돌을 부술때 마다 점수가 차감된다.<br/>
+                        즉, 최대한 벽돌을 적게 부수며 정상에 도달하는 것이 게임의 목표이다.<br/>
+                        ‘바운스 킹’은 난이도에 따라 2/4/6 단계로 이루어져 있으며, <br/>
+                        벽돌을 깨고 천장에 도달하면 다음 단계로 나아갈 수 있다. <br/>
+                        또한 첫 번째 단계가 아니면 주인공이 발판을 밟지 못하더라도 <br/>
+                        그대로 하위 스테이지로 떨어져 게임을 계속 진행할 수 있다. <br/>
+                        마지막 단계에서 모든 벽돌을 부수면 공주에게 도달하며 게임을 클리어하게 된다. 
+                    </p>
+                </div>
+            </div>
+
+            <div id="scoreBoard" class="select">
+                <div class="back">Back</div>
+                <p id="1st"></p>
+                <p id="2nd"></p>
+                <p id="3rd"></p>
+                <p id="4th"></p>
+                <p id="5th"></p>
+            </div>
+            
+        </div>
+
+      
+             <canvas id="canvas" width="780px" height="1000px"></canvas> 
+             <img id="ending" width="780px" src="ending.png">
+
+
+        <div id="start_div">
+            <img id="start_mov" width="780px" src="start.gif">
+            <h2>Get Ready</h2>
+        </div>
+        
+        
+    </body>
+</html>
